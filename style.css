@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: left;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 100px repeat(3,minmax(100px,1fr)) 100px;
+  gap: 20px;
+  height: 100vh;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.box {
+  border: 2px solid #333;
+  background-color:red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  grid-column:1/-1;
+}
+
+.content {
+  grid-column: 1/4;
+  grid-row: 3/5;
+}
+
+/* span mean: tính từ line của phần tử đó chọn ra số lượng hàng,cột ->number */
+.sidebar {
+  grid-column: span 1;
+  grid-row: 2/-2;
+}
+
+
+/* -1 mean: choose to line of the end of row or column */
+footer {
+  grid-column: 1/-1;
+  grid-row: 5/-1;
+}
